@@ -1,0 +1,29 @@
+
+<h1>Task Manager</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li><% if task.completed%>
+  [✔️]
+  <% else %>
+  [ ]
+  <% end %>
+   <%= link_to "#{task.title}",task_path(task.id)%></li>
+  <% end %>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
